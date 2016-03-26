@@ -1,0 +1,20 @@
+<div class="container" ng-controller="ItemCtrl as item">
+	<div class="jumbotron">
+		<h1 align="center">Market App</h1>
+		<div id="item-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+
+			</div>
+		</div>
+	</div>
+	<div id="item-list" class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<div class="checkbox" ng-repeat="singleItem in items">
+				<label>
+					<input type="checkbox" ng-click="item.removeItem(singleItem)">
+					{{ single.Item.value }}
+				</label>
+			</div>
+		</div>
+	</div>
+</div>

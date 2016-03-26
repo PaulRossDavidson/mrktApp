@@ -21,8 +21,10 @@ mrktApp.service('ItemService', function($http, $q) {
 		'removeItem': function(item) {
 			var defer = $q.defer();
 			$http.post('/item/removeItem', item).success(function(resp){
-				defer.resolve(resp):
-			})
+				defer.resolve(resp);
+			}).error( function(err) {
+				defer.reject(err);
+			});
+			return defer.promise;
 		}
-	}
-})
+	}});
