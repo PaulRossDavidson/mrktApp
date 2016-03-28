@@ -2,7 +2,7 @@
 
 var mrktApp = angular.module('mrktApp', ['ngRoute','ui.bootstrap']);
 mrktApp.config(['$routeProvider',
-	fuction($routeProvider) {
+	function($routeProvider) {
 		$routeProvider.when('/', {
 			templateUrl: '/templates/item.html',
 			controller: 'ItemCtrl'
